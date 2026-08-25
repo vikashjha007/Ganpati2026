@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>माँ कृपा गणपति समिति 2025</title>
+  <title>माँ कृपा गणपति समिति 2026</title>
   
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Yantramanav:wght@400;500;700&display=swap" rel="stylesheet">
-  <!-- Font Awesome -->
+  <!-- Font Awesome Icons -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
   
   <!-- Firebase SDKs -->
@@ -21,10 +21,12 @@
 
   <style>
     :root {
-      --temple-saffron: #d9480f;
-      --temple-deep-red: #9c150b;
-      --temple-gold: #f59f00;
-      --temple-gold-light: #fff3bf;
+      --temple-red: #880e4f;
+      --temple-sindoor: #b71c1c;
+      --temple-saffron: #e65100;
+      --temple-saffron-light: #ff7043;
+      --temple-gold: #ffb300;
+      --temple-gold-light: #fff8e1;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -32,12 +34,12 @@
     body {
       font-family: 'Yantramanav', sans-serif;
       min-height: 100vh;
-      color: #2b2b2b;
-      background-color: #2c0b0e;
+      color: #212529;
+      background-color: #3e0c0c;
       position: relative;
     }
 
-    /* Fixed & Visible Ganpati Ji Background Wallpaper */
+    /* Reliable Ganpati Bappa Background Artwork */
     body::before {
       content: "";
       position: fixed;
@@ -46,34 +48,37 @@
       width: 100%;
       height: 100%;
       background-image: 
-        linear-gradient(rgba(45, 12, 16, 0.72), rgba(45, 12, 16, 0.82)),
-        url('https://images.unsplash.com/photo-1567591370504-817812f8a84a?q=80&w=1600&auto=format&fit=crop');
+        linear-gradient(rgba(50, 8, 8, 0.78), rgba(50, 8, 8, 0.88)),
+        url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Ganesh_Chaturthi_2019.jpg/1200px-Ganesh_Chaturthi_2019.jpg');
       background-repeat: no-repeat;
       background-position: center center;
       background-size: cover;
       background-attachment: fixed;
       z-index: -1;
-      pointer-events: none;
     }
 
     .temple-title {
       font-family: 'Rozha One', serif;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.8px;
     }
 
-    /* Header */
+    /* Temple Header */
     .header {
-      background: linear-gradient(135deg, var(--temple-deep-red) 0%, var(--temple-saffron) 60%, #c92a2a 100%);
-      color: #fff;
+      background: linear-gradient(135deg, var(--temple-sindoor) 0%, var(--temple-saffron) 60%, #e53935 100%);
+      color: #ffffff;
       padding: 1.25rem 1rem;
-      border-bottom: 4px solid var(--temple-gold);
-      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
-      position: relative;
+      border-bottom: 5px solid var(--temple-gold);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .header-border-pattern {
+      height: 8px;
+      background: repeating-linear-gradient(45deg, var(--temple-gold), var(--temple-gold) 12px, var(--temple-sindoor) 12px, var(--temple-sindoor) 24px);
     }
 
     .lang-switcher-btn {
-      background: rgba(255, 255, 255, 0.15);
-      border: 1.5px solid var(--temple-gold);
+      background: rgba(255, 255, 255, 0.2);
+      border: 2px solid var(--temple-gold);
       color: #fff;
       padding: 0.35rem 0.85rem;
       border-radius: 50rem;
@@ -88,43 +93,37 @@
       color: #000;
     }
 
-    .header-border-pattern {
-      height: 6px;
-      background: repeating-linear-gradient(45deg, var(--temple-gold), var(--temple-gold) 10px, var(--temple-saffron) 10px, var(--temple-saffron) 20px);
-    }
-
-    /* Navigation */
+    /* Navigation Bar */
     .nav-container {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(8px);
-      border-bottom: 2px solid #ffd8a8;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      background: rgba(255, 255, 255, 0.98);
+      border-bottom: 2px solid var(--temple-gold);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     }
 
     .nav-btn {
       font-weight: 600;
       border-radius: 50rem;
-      padding: 0.5rem 1.25rem;
-      border: 1px solid #ffd8a8;
-      background-color: #fffaf0;
-      color: #b03a0e;
-      transition: all 0.25s ease-in-out;
+      padding: 0.45rem 1.15rem;
+      border: 1.5px solid #ffcc80;
+      background-color: var(--temple-gold-light);
+      color: var(--temple-saffron);
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
     }
 
     .nav-btn:hover {
-      background-color: #ffe8cc;
-      color: var(--temple-deep-red);
-      transform: translateY(-1px);
+      background-color: #ffe0b2;
+      color: var(--temple-sindoor);
     }
 
     .nav-btn.active {
-      background: linear-gradient(135deg, var(--temple-saffron), var(--temple-deep-red));
-      color: #fff !important;
-      border-color: var(--temple-deep-red);
-      box-shadow: 0 4px 10px rgba(217, 72, 15, 0.35);
+      background: linear-gradient(135deg, var(--temple-saffron), var(--temple-sindoor)) !important;
+      color: #ffffff !important;
+      border-color: var(--temple-sindoor);
+      box-shadow: 0 3px 10px rgba(183, 28, 28, 0.4);
     }
 
-    /* Back Button Bar */
+    /* Back Button */
     .action-top-bar {
       display: flex;
       justify-content: flex-start;
@@ -138,22 +137,22 @@
       background: #ffffff;
       border: 2px solid var(--temple-saffron);
       color: var(--temple-saffron);
-      padding: 0.4rem 1.1rem;
+      padding: 0.4rem 1.15rem;
       border-radius: 50rem;
       font-weight: 700;
       font-size: 0.95rem;
       cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
       transition: all 0.2s ease;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
     .back-btn:hover {
       background: var(--temple-saffron);
-      color: #fff;
+      color: #ffffff;
       transform: translateX(-3px);
     }
 
-    /* Pages & Cards */
+    /* Single Page Views */
     .page { display: none; }
     .page.active { display: block; animation: fadeIn 0.25s ease-in-out; }
 
@@ -165,76 +164,76 @@
     .temple-card {
       background: rgba(255, 255, 255, 0.96);
       border-radius: 1.25rem;
-      border: 2px solid #ffd8a8;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      border: 2px solid var(--temple-gold);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
       padding: 2rem;
-      backdrop-filter: blur(8px);
     }
 
     .card-header-temple {
       display: flex;
       align-items: center;
       gap: 0.75rem;
-      border-bottom: 2px dashed #fed7aa;
+      border-bottom: 2px dashed #ffb74d;
       padding-bottom: 1rem;
       margin-bottom: 1.5rem;
     }
 
     .card-header-temple h2 {
       font-family: 'Rozha One', serif;
-      font-size: 1.6rem;
-      color: var(--temple-deep-red);
+      font-size: 1.7rem;
+      color: var(--temple-sindoor);
       margin: 0;
     }
 
-    /* Portal Quick Cards */
+    /* Portal Navigation Cards */
     .portal-card {
       border-radius: 1.25rem;
       color: #fff;
       padding: 2rem 1.5rem;
       text-align: center;
       cursor: pointer;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-      transition: all 0.3s ease;
-      border: 2px solid rgba(255,255,255,0.25);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+      transition: all 0.25s ease;
+      border: 2px solid rgba(255,255,255,0.3);
+      user-select: none;
     }
 
     .portal-card:hover {
       transform: translateY(-5px) scale(1.02);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.35);
+      box-shadow: 0 12px 26px rgba(0,0,0,0.4);
     }
 
     .portal-card i {
       font-size: 2.75rem;
       margin-bottom: 0.85rem;
-      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+      filter: drop-shadow(0 2px 5px rgba(0,0,0,0.3));
     }
 
     /* Forms */
     .form-control, .form-select {
-      border: 1.5px solid #fed7aa;
+      border: 1.5px solid #ffcc80;
       border-radius: 0.6rem;
       padding: 0.65rem 0.9rem;
     }
 
     .form-control:focus, .form-select:focus {
       border-color: var(--temple-saffron);
-      box-shadow: 0 0 0 0.25rem rgba(217, 72, 15, 0.2);
+      box-shadow: 0 0 0 0.25rem rgba(230, 81, 0, 0.2);
     }
 
     .file-upload-box {
-      border: 2px dashed #fbd38d;
+      border: 2px dashed #ffb74d;
       border-radius: 0.75rem;
       padding: 1.5rem 1rem;
       text-align: center;
       cursor: pointer;
-      background: #fffaf0;
+      background: var(--temple-gold-light);
       transition: all 0.25s ease;
     }
 
     .file-upload-box:hover {
       border-color: var(--temple-saffron);
-      background: #fff4e6;
+      background: #ffe0b2;
     }
 
     /* Total Displays */
@@ -243,7 +242,7 @@
       color: white;
       padding: 1.5rem;
       text-align: center;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
     }
 
     /* Members Grid */
@@ -255,19 +254,19 @@
 
     .member-card {
       background: #fff;
-      border: 1.5px solid #ffedd5;
+      border: 1.5px solid #ffe0b2;
       border-radius: 1rem;
       padding: 1.5rem 1rem;
       text-align: center;
       position: relative;
       box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-      transition: all 0.3s ease;
+      transition: all 0.25s ease;
     }
 
     .member-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 8px 20px rgba(217, 72, 15, 0.18);
-      border-color: #fdba74;
+      box-shadow: 0 8px 20px rgba(183, 28, 28, 0.15);
+      border-color: var(--temple-gold);
     }
 
     .member-photo, .member-placeholder {
@@ -281,7 +280,7 @@
     .member-photo { object-fit: cover; }
     
     .member-placeholder {
-      background: #fff3bf;
+      background: var(--temple-gold-light);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -289,7 +288,7 @@
       color: var(--temple-saffron);
     }
 
-    /* Gallery */
+    /* Gallery Grid */
     .image-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -301,8 +300,8 @@
       aspect-ratio: 1;
       border-radius: 0.85rem;
       overflow: hidden;
-      border: 2px solid #ffd8a8;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border: 2px solid var(--temple-gold);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
       background: #fff;
     }
 
@@ -320,7 +319,7 @@
       position: absolute;
       top: 0.5rem;
       right: 0.5rem;
-      background: rgba(220, 38, 38, 0.88);
+      background: rgba(183, 28, 28, 0.9);
       color: white;
       border: none;
       border-radius: 50%;
@@ -364,7 +363,7 @@
       position: absolute;
       top: -15px;
       right: -15px;
-      background: var(--temple-deep-red);
+      background: var(--temple-sindoor);
       color: #fff;
       border: 2px solid #fff;
       border-radius: 50%;
@@ -383,10 +382,10 @@
 <!-- Header -->
 <header class="header text-center">
   <div class="container d-flex justify-content-between align-items-center mb-1">
-    <div style="width: 80px;"></div> <!-- Spacer for center balancing -->
+    <div style="width: 80px;"></div>
     <div class="d-flex justify-content-center align-items-center gap-2">
       <i class="fas fa-om fa-2x text-warning"></i>
-      <h1 class="temple-title display-6 m-0 fw-bold" data-i18n="headerTitle">माँ कृपा गणपति समिति 2025</h1>
+      <h1 class="temple-title display-6 m-0 fw-bold" data-i18n="headerTitle">माँ कृपा गणपति समिति 2026</h1>
       <i class="fas fa-om fa-2x text-warning"></i>
     </div>
     <div style="width: 80px;" class="text-end">
@@ -402,11 +401,11 @@
 <!-- Navigation Bar -->
 <nav class="nav-container py-2" id="navigation" style="display: none;">
   <div class="container d-flex justify-content-center flex-wrap gap-2">
-    <button class="nav-btn" data-page="home"><i class="fas fa-home me-1"></i><span data-i18n="navHome">Home</span></button>
-    <button class="nav-btn" data-page="donations"><i class="fas fa-hand-holding-heart me-1"></i><span data-i18n="navDonations">Donations</span></button>
-    <button class="nav-btn" data-page="expenses"><i class="fas fa-file-invoice-dollar me-1"></i><span data-i18n="navExpenses">Expenses</span></button>
-    <button class="nav-btn" data-page="members"><i class="fas fa-users me-1"></i><span data-i18n="navMembers">Members</span></button>
-    <button class="nav-btn" data-page="gallery"><i class="fas fa-images me-1"></i><span data-i18n="navGallery">Gallery</span></button>
+    <button class="nav-btn" data-page="home" onclick="navigateTo('home')"><i class="fas fa-home me-1"></i><span data-i18n="navHome">Home</span></button>
+    <button class="nav-btn" data-page="donations" onclick="navigateTo('donations')"><i class="fas fa-hand-holding-heart me-1"></i><span data-i18n="navDonations">Donations</span></button>
+    <button class="nav-btn" data-page="expenses" onclick="navigateTo('expenses')"><i class="fas fa-file-invoice-dollar me-1"></i><span data-i18n="navExpenses">Expenses</span></button>
+    <button class="nav-btn" data-page="members" onclick="navigateTo('members')"><i class="fas fa-users me-1"></i><span data-i18n="navMembers">Members</span></button>
+    <button class="nav-btn" data-page="gallery" onclick="navigateTo('gallery')"><i class="fas fa-images me-1"></i><span data-i18n="navGallery">Gallery</span></button>
   </div>
 </nav>
 
@@ -419,12 +418,12 @@
       <div class="mb-3">
         <i class="fas fa-om text-warning display-4"></i>
       </div>
-      <h2 class="temple-title text-danger fw-bold mb-2" data-i18n="welcomeTitle">Welcome to माँ कृपा गणपति समिति 2025</h2>
+      <h2 class="temple-title text-danger fw-bold mb-2" data-i18n="welcomeTitle">Welcome to माँ कृपा गणपति समिति 2026</h2>
       <p class="text-muted lead mb-4" data-i18n="welcomeSubtitle">Manage your Ganpati festival activities with ease</p>
       
       <div class="row g-4 justify-content-center">
         <div class="col-md-6 col-lg-3">
-          <div class="portal-card" style="background: linear-gradient(135deg, #059669, #10b981);" data-page="donations">
+          <div class="portal-card" style="background: linear-gradient(135deg, #059669, #10b981);" onclick="navigateTo('donations')">
             <i class="fas fa-hand-holding-heart"></i>
             <h4 class="fw-bold" data-i18n="cardDonationsTitle">Donations</h4>
             <p class="small mb-0 opacity-75" data-i18n="cardDonationsDesc">Track all donations received</p>
@@ -432,7 +431,7 @@
         </div>
 
         <div class="col-md-6 col-lg-3">
-          <div class="portal-card" style="background: linear-gradient(135deg, #1d4ed8, #3b82f6);" data-page="expenses">
+          <div class="portal-card" style="background: linear-gradient(135deg, #1d4ed8, #3b82f6);" onclick="navigateTo('expenses')">
             <i class="fas fa-file-invoice-dollar"></i>
             <h4 class="fw-bold" data-i18n="cardExpensesTitle">Expenses</h4>
             <p class="small mb-0 opacity-75" data-i18n="cardExpensesDesc">Manage festival expenses</p>
@@ -440,7 +439,7 @@
         </div>
 
         <div class="col-md-6 col-lg-3">
-          <div class="portal-card" style="background: linear-gradient(135deg, #7c3aed, #8b5cf6);" data-page="members">
+          <div class="portal-card" style="background: linear-gradient(135deg, #7c3aed, #8b5cf6);" onclick="navigateTo('members')">
             <i class="fas fa-users"></i>
             <h4 class="fw-bold" data-i18n="cardMembersTitle">Members</h4>
             <p class="small mb-0 opacity-75" data-i18n="cardMembersDesc">Member info & Committee</p>
@@ -448,7 +447,7 @@
         </div>
 
         <div class="col-md-6 col-lg-3">
-          <div class="portal-card" style="background: linear-gradient(135deg, #c2410c, #ea580c);" data-page="gallery">
+          <div class="portal-card" style="background: linear-gradient(135deg, #c2410c, #ea580c);" onclick="navigateTo('gallery')">
             <i class="fas fa-images"></i>
             <h4 class="fw-bold" data-i18n="cardGalleryTitle">Gallery</h4>
             <p class="small mb-0 opacity-75" data-i18n="cardGalleryDesc">Festival photo gallery</p>
@@ -475,7 +474,7 @@
   <div id="donations" class="page">
     <div class="temple-card">
       <div class="action-top-bar">
-        <button type="button" class="back-btn" onclick="goBackToHome(event)">
+        <button type="button" class="back-btn" onclick="navigateTo('home')">
           <i class="fas fa-arrow-left"></i> <span data-i18n="backBtn">Back to Home</span>
         </button>
       </div>
@@ -535,7 +534,7 @@
   <div id="expenses" class="page">
     <div class="temple-card">
       <div class="action-top-bar">
-        <button type="button" class="back-btn" onclick="goBackToHome(event)">
+        <button type="button" class="back-btn" onclick="navigateTo('home')">
           <i class="fas fa-arrow-left"></i> <span data-i18n="backBtn">Back to Home</span>
         </button>
       </div>
@@ -577,17 +576,726 @@
   <div id="members" class="page">
     <div class="temple-card">
       <div class="action-top-bar">
-        <button type="button" class="back-btn" onclick="goBackToHome(event)">
+        <button type="button" class="back-btn" onclick="navigateTo('home')">
           <i class="fas fa-arrow-left"></i> <span data-i18n="backBtn">Back to Home</span>
         </button>
       </div>
 
       <div class="card-header-temple">
         <i class="fas fa-users fa-2x" style="color: #7c3aed;"></i>
-        <h2 data-i18n="memberHeader">Members Management</h2>
+      <h2  data-i18n="memberHeader">Members Management</h2>
       </div>
 
       <!-- Add Member Form -->
       <div class="row g-3 p-3 bg-light rounded-3 border mb-4" id="add-member">
         <div class="col-md-6 d-flex flex-column gap-3">
-          <input type="text" class="form-control" id="memberName" placeho
+          <input type="text" class="form-control" id="memberName" placeholder="Member Name" data-i18n-placeholder="memberNamePlaceholder">
+          <input type="text" class="form-control" id="memberContact" placeholder="Contact Number" data-i18n-placeholder="contactPlaceholder">
+        </div>
+        <div class="col-md-6 d-flex flex-column gap-2">
+          <div class="file-upload-box flex-grow-1" onclick="document.getElementById('memberPhoto').click()">
+            <input type="file" id="memberPhoto" accept="image/*" onchange="handleMemberPhoto(this)" style="display:none;">
+            <div id="photoPreview">
+              <i class="fas fa-camera fa-2x text-muted mb-1"></i>
+              <p id="photoFileName" class="small m-0 text-muted" data-i18n="uploadMemberPhotoText">Click to upload member photo</p>
+            </div>
+          </div>
+          <button class="btn btn-dark fw-bold" style="background: #7c3aed; border-color: #7c3aed;" onclick="addMember()">
+            <i class="fas fa-plus me-1"></i> <span data-i18n="addMemberBtn">Add Member</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="member-grid" id="membersGrid"></div>
+      
+      <div id="membersEmpty" class="text-center py-5 text-muted" style="display: none;">
+        <i class="fas fa-users fa-3x mb-2 opacity-50"></i>
+        <p data-i18n="noMembers">No members added yet</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gallery Page -->
+  <div id="gallery" class="page">
+    <div class="temple-card">
+      <div class="action-top-bar">
+        <button type="button" class="back-btn" onclick="navigateTo('home')">
+          <i class="fas fa-arrow-left"></i> <span data-i18n="backBtn">Back to Home</span>
+        </button>
+      </div>
+
+      <div class="card-header-temple">
+        <i class="fas fa-images fa-2x text-danger"></i>
+        <h2 data-i18n="galleryHeader">Festival Gallery</h2>
+      </div>
+
+      <!-- Upload Trigger -->
+      <div class="file-upload-box btn-upload-image mb-4" onclick="document.getElementById('galleryImages').click()">
+        <input type="file" id="galleryImages" accept="image/*" multiple onchange="handleGalleryImages(this)" style="display:none;">
+        <i class="fas fa-camera-retro fa-3x text-danger mb-2"></i>
+        <h5 class="fw-bold mb-1" data-i18n="uploadGalleryTitle">Upload Festival Photos</h5>
+        <p class="text-muted small m-0" data-i18n="uploadGallerySubtitle">Click to select multiple photos</p>
+      </div>
+
+      <div class="image-grid" id="imageGrid"></div>
+
+      <div id="galleryEmpty" class="text-center py-5 text-muted" style="display: none;">
+        <i class="fas fa-images fa-3x mb-2 opacity-50"></i>
+        <p data-i18n="noImages">No photos uploaded yet</p>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- Full Image Modal -->
+<div class="modal-preview" id="imageModal">
+  <div class="modal-content-custom">
+    <img id="modalImage" src="" alt="Ganpati Photo">
+    <button class="modal-close-btn" onclick="closeModal()">✕</button>
+    <div class="position-absolute bottom-0 start-0 m-3 p-2 bg-dark bg-opacity-75 text-white rounded small" id="modalInfo">
+      <p id="modalImageName" class="m-0 fw-bold"></p>
+      <p id="modalImageDate" class="m-0 text-white-50"></p>
+    </div>
+  </div>
+</div>
+
+<!-- Translations & i18n Logic -->
+<script>
+  let currentLang = 'hi';
+
+  const translations = {
+    hi: {
+      langBtn: 'English',
+      headerTitle: 'माँ कृपा गणपति समिति 2026',
+      headerSubtitle: '॥ श्री गणेशाय नमः ॥ Ganpati Bappa Morya!',
+      navHome: 'होम',
+      navDonations: 'दान (Donations)',
+      navExpenses: 'खर्च (Expenses)',
+      navMembers: 'सदस्य (Members)',
+      navGallery: 'गैलरी (Gallery)',
+      welcomeTitle: 'माँ कृपा गणपति समिति 2026 में आपका स्वागत है',
+      welcomeSubtitle: 'गणेश उत्सव के सभी कार्यों का सुगम प्रबंधन करें',
+      cardDonationsTitle: 'दान (Donations)',
+      cardDonationsDesc: 'प्राप्त सभी दान की सूची देखें व जोड़ें',
+      cardExpensesTitle: 'खर्च (Expenses)',
+      cardExpensesDesc: 'उत्सव के सभी खर्चों का हिसाब रखें',
+      cardMembersTitle: 'सदस्य (Members)',
+      cardMembersDesc: 'समिति सदस्यों की सूची व विवरण',
+      cardGalleryTitle: 'गैलरी (Gallery)',
+      cardGalleryDesc: 'उत्सव की सुंदर तस्वीरें देखें व अपलोड करें',
+      devHeader: 'डेवलपर जानकारी',
+      backBtn: 'होम पर वापस जाएं',
+      donationHeader: 'दान प्रबंधन (Donation Management)',
+      roomPlaceholder: 'कमरा नंबर (Room No.)',
+      donorPlaceholder: 'दानदाता का नाम (Donor Name)',
+      cashOption: 'नकद (Cash)',
+      onlineOption: 'ऑनलाइन (Online)',
+      amountPlaceholder: 'राशि (₹)',
+      addDonationBtn: 'दान जोड़ें',
+      tableRoom: 'कमरा नं.',
+      tableName: 'नाम',
+      tableAmount: 'राशि (₹)',
+      totalDonationsTitle: 'कुल प्राप्त दान (Total Donations)',
+      expenseHeader: 'खर्च प्रबंधन (Expense Management)',
+      expenseNamePlaceholder: 'खर्च का नाम',
+      uploadBillText: 'बिल या रसीद संलग्न करें',
+      addExpenseBtn: 'खर्च जोड़ें',
+      totalExpensesTitle: 'कुल खर्च (Total Expenses)',
+      memberHeader: 'सदस्य प्रबंधन (Members Management)',
+      memberNamePlaceholder: 'सदस्य का नाम',
+      contactPlaceholder: 'संपर्क नंबर (Mobile No.)',
+      uploadMemberPhotoText: 'सदस्य की फोटो अपलोड करें',
+      addMemberBtn: 'सदस्य जोड़ें',
+      noMembers: 'अभी तक कोई सदस्य नहीं जोड़ा गया',
+      galleryHeader: 'उत्सव फोटो गैलरी',
+      uploadGalleryTitle: 'उत्सव की तस्वीरें अपलोड करें',
+      uploadGallerySubtitle: 'एक साथ कई तस्वीरें चुनने के लिए क्लिक करें',
+      noImages: 'अभी तक कोई तस्वीर अपलोड नहीं की गई है',
+      viewBillBtn: 'बिल देखें'
+    },
+    en: {
+      langBtn: 'हिन्दी',
+      headerTitle: 'Maa Kripa Ganpati Samiti 2026',
+      headerSubtitle: '|| Shree Ganeshay Namah || Ganpati Bappa Morya!',
+      navHome: 'Home',
+      navDonations: 'Donations',
+      navExpenses: 'Expenses',
+      navMembers: 'Members',
+      navGallery: 'Gallery',
+      welcomeTitle: 'Welcome to Maa Kripa Ganpati Samiti 2026',
+      welcomeSubtitle: 'Manage your Ganpati festival activities with ease',
+      cardDonationsTitle: 'Donations',
+      cardDonationsDesc: 'Track all donations received',
+      cardExpensesTitle: 'Expenses',
+      cardExpensesDesc: 'Manage festival expenses',
+      cardMembersTitle: 'Members',
+      cardMembersDesc: 'Member info & Committee',
+      cardGalleryTitle: 'Gallery',
+      cardGalleryDesc: 'Festival photo gallery',
+      devHeader: 'Developer Info',
+      backBtn: 'Back to Home',
+      donationHeader: 'Donation Management',
+      roomPlaceholder: 'Room Number',
+      donorPlaceholder: 'Donor Name',
+      cashOption: 'Cash',
+      onlineOption: 'Online',
+      amountPlaceholder: 'Amount (₹)',
+      addDonationBtn: 'Add Donation',
+      tableRoom: 'Room No.',
+      tableName: 'Name',
+      tableAmount: 'Amount (₹)',
+      totalDonationsTitle: 'Total Donations Received',
+      expenseHeader: 'Expense Management',
+      expenseNamePlaceholder: 'Expense Name',
+      uploadBillText: 'Click to upload bill / receipt',
+      addExpenseBtn: 'Add Expense',
+      totalExpensesTitle: 'Total Expenses',
+      memberHeader: 'Members Management',
+      memberNamePlaceholder: 'Member Name',
+      contactPlaceholder: 'Contact Number',
+      uploadMemberPhotoText: 'Click to upload member photo',
+      addMemberBtn: 'Add Member',
+      noMembers: 'No members added yet',
+      galleryHeader: 'Festival Gallery',
+      uploadGalleryTitle: 'Upload Festival Photos',
+      uploadGallerySubtitle: 'Click to select multiple photos',
+      noImages: 'No photos uploaded yet',
+      viewBillBtn: 'View Bill'
+    }
+  };
+
+  function applyLanguage(lang) {
+    currentLang = lang;
+    const btn = document.getElementById('langBtnText');
+    if (btn) btn.textContent = translations[lang].langBtn;
+    
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (translations[lang][key]) {
+        el.textContent = translations[lang][key];
+      }
+    });
+
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      const key = el.getAttribute('data-i18n-placeholder');
+      if (translations[lang][key]) {
+        el.setAttribute('placeholder', translations[lang][key]);
+      }
+    });
+  }
+
+  function toggleLanguage() {
+    const newLang = currentLang === 'hi' ? 'en' : 'hi';
+    applyLanguage(newLang);
+  }
+</script>
+
+<!-- App Navigation & Core Logic -->
+<script>
+  function navigateTo(pageId, pushState = true) {
+    if (!pageId) return;
+    const pageEl = document.getElementById(pageId);
+    if (!pageEl) return;
+
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    pageEl.classList.add('active');
+
+    document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+    const navBtn = document.querySelector(`.nav-btn[data-page="${pageId}"]`);
+    if(navBtn) navBtn.classList.add('active');
+
+    const navContainer = document.getElementById('navigation');
+    if (navContainer) {
+      navContainer.style.display = (pageId !== 'home') ? 'block' : 'none';
+    }
+
+    if (pushState) {
+      history.pushState({ page: pageId }, '', '#' + pageId);
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // Handle hardware & browser back button
+  window.addEventListener('popstate', function(event) {
+    if (event.state && event.state.page) {
+      navigateTo(event.state.page, false);
+    } else {
+      navigateTo('home', false);
+    }
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    history.replaceState({ page: 'home' }, '', '#home');
+    applyLanguage('hi');
+    fetchVisibilityFlag();
+    loadDonations();
+    loadExpenses();
+    loadMembers();
+    loadGallery();
+    initializeGalleryEvents();
+  });
+
+  function formatFileSize(size) {
+    if (size < 1024) return size + " B";
+    else if (size < 1024 * 1024) return (size / 1024).toFixed(1) + " KB";
+    else return (size / (1024 * 1024)).toFixed(1) + " MB";
+  }
+
+  // Hide/Show Admin Controls
+  function fetchVisibilityFlag() {
+    const docId = "HideShow";
+    db.collection("HideShowFlag").doc(docId).get()
+      .then(doc => {
+        if(doc.exists) {
+          applyVisibility(doc.data().Flag);
+        } else {
+          applyVisibility(true);
+        }
+      })
+      .catch(error => {
+        console.error("Error fetching flag:", error);
+        applyVisibility(true);
+      });
+  }
+
+  function applyVisibility(flag) {
+    const displayStyle = flag ? 'flex' : 'none';
+    const inlineStyle = flag ? 'inline-block' : 'none';
+
+    document.querySelectorAll('#add-donation').forEach(el => el.style.display = displayStyle);
+    document.querySelectorAll('#btn-delete-donation').forEach(el => el.style.display = inlineStyle);
+    document.querySelectorAll('#add-member').forEach(el => el.style.display = displayStyle);
+    document.querySelectorAll('#btn-delete-member').forEach(el => el.style.display = inlineStyle);
+    document.querySelectorAll('#add-expense').forEach(el => el.style.display = displayStyle);
+    document.querySelectorAll('#btn-delete-expense').forEach(el => el.style.display = inlineStyle);
+    document.querySelectorAll('.btn-upload-image').forEach(el => el.style.display = displayStyle);
+  }
+
+  // Donations Logic
+  let donations = [];
+  function addDonation() {
+    const roomNumber = document.getElementById('roomNumber').value;
+    const name = document.getElementById('donorName').value;
+    const paymentMode = document.getElementById('paymentMode').value;
+    const amount = parseFloat(document.getElementById('donationAmount').value);
+    
+    if (roomNumber && name && amount) {
+      db.collection("donations").add({
+        roomNumber, name, paymentMode, amount, date: new Date().toLocaleDateString()
+      }).then(() => {
+        clearDonationForm(); 
+        loadDonations();
+      });
+    } else {
+      alert(currentLang === 'hi' ? 'कृपया दान के सभी विवरण भरें।' : 'Please fill all fields for donation.');
+    }
+  }
+
+  function loadDonations() {
+    db.collection("donations").get().then(q => {
+      donations = [];
+      q.forEach(doc => { 
+        let d = doc.data(); 
+        d.id = doc.id; 
+        donations.push(d); 
+      });
+      donations.sort((a, b) => parseInt(a.roomNumber) - parseInt(b.roomNumber));
+      renderDonations();
+    });
+  }
+
+  function renderDonations() {
+    const tableBody = document.getElementById('donationsTable');
+    const totalAmount = donations.reduce((sum, d) => sum + d.amount, 0);
+    tableBody.innerHTML = donations.map(donation => `
+      <tr>
+        <td class="fw-bold">${donation.roomNumber}</td>
+        <td>${donation.name}</td>
+        <td class="text-end text-success fw-bold">₹${donation.amount.toLocaleString()}</td>
+      </tr>
+    `).join('');
+    document.querySelector('#totalDonations .amount').textContent = `₹${totalAmount.toLocaleString()}`;
+  }
+
+  function clearDonationForm() {
+    document.getElementById('roomNumber').value = '';
+    document.getElementById('donorName').value = '';
+    document.getElementById('paymentMode').value = 'cash';
+    document.getElementById('donationAmount').value = '';
+  }
+
+  // Expenses Logic
+  let expenseAttachmentFile = null;
+
+  function handleExpenseFile(input) {
+    expenseAttachmentFile = input.files[0];
+    document.getElementById('expenseFileName').textContent = expenseAttachmentFile ?
+      `${expenseAttachmentFile.name} (${formatFileSize(expenseAttachmentFile.size)})` : (currentLang === 'hi' ? "बिल या रसीद संलग्न करें" : "Click to upload bill / receipt");
+  }
+
+  function addExpense() {
+    const name = document.getElementById('expenseName').value.trim();
+    const amount = parseFloat(document.getElementById('expenseAmount').value);
+
+    if (!name || !amount) {
+      alert(currentLang === 'hi' ? 'कृपया खर्च का नाम और राशि भरें।' : 'Please fill expense name and amount.');
+      return;
+    }
+
+    if (expenseAttachmentFile) {
+      uploadToCloudinary(expenseAttachmentFile, (url, fname, fsize) => {
+        if (url) saveExpense(name, amount, url, fname, fsize);
+        else alert(currentLang === 'hi' ? "संलग्नक अपलोड विफल रहा!" : "Attachment upload failed!");
+      });
+    } else {
+      saveExpense(name, amount, null, null, null);
+    }
+  }
+
+  function saveExpense(name, amount, attachmentURL, attachmentName, attachmentSize) {
+    db.collection('expenses').add({
+      name,
+      amount,
+      date: new Date().toLocaleDateString(),
+      attachmentURL: attachmentURL || null,
+      attachmentName: attachmentName || null,
+      attachmentSize: attachmentSize || null
+    }).then(() => {
+      alert(currentLang === 'hi' ? 'खर्च सफलतापूर्वक जोड़ा गया!' : 'Successfully added expense!');
+      clearExpenseForm();
+      loadExpenses();
+    }).catch(e => alert('Error adding expense: ' + e.message));
+  }
+
+  function clearExpenseForm() {
+    document.getElementById('expenseName').value = '';
+    document.getElementById('expenseAmount').value = '';
+    document.getElementById('expenseFileName').textContent = currentLang === 'hi' ? 'बिल या रसीद संलग्न करें' : 'Click to upload bill / receipt';
+    document.getElementById('expenseFile').value = '';
+    expenseAttachmentFile = null;
+  }
+
+  function loadExpenses() {
+    db.collection("expenses").orderBy("amount", "desc").get()
+      .then(querySnapshot => {
+        const expenses = [];
+        querySnapshot.forEach(doc => {
+          let data = doc.data();
+          data.id = doc.id;
+          expenses.push(data);
+        });
+        renderExpenses(expenses);
+      })
+      .catch(error => {
+        console.error("Error loading expenses:", error);
+      });
+  }
+
+  function renderExpenses(expenses) {
+    const container = document.getElementById('expensesList');
+    const total = expenses.reduce((sum, exp) => sum + (exp.amount || 0), 0);
+
+    container.innerHTML = expenses.map(expense => `
+      <div class="card p-3 mb-2 shadow-sm border d-flex flex-row justify-content-between align-items-center flex-wrap gap-2">
+        <div>
+          <h6 class="m-0 fw-bold text-danger">${expense.name || 'Unknown Expense'}</h6>
+          <small class="text-muted">Date: ${expense.date || 'N/A'}</small>
+          ${expense.attachmentURL ? `
+            <div class="mt-1">
+              <button onclick="window.open('${expense.attachmentURL}', '_blank')" class="btn btn-sm btn-outline-primary py-0">
+                <i class="fas fa-paperclip me-1"></i>${translations[currentLang].viewBillBtn}
+              </button>
+            </div>
+          ` : ''}
+        </div>
+        <div class="text-end">
+          <div class="fs-5 fw-bold text-success">₹${(expense.amount || 0).toLocaleString()}</div>
+        </div>
+        <button id="btn-delete-expense" onclick="deleteExpense('${expense.id}')" class="btn btn-sm btn-outline-danger" style="display:none;">
+          <i class="fas fa-trash"></i>
+        </button>
+      </div>
+    `).join('');
+
+    document.querySelector('#totalExpenses .amount').textContent = `₹${total.toLocaleString()}`;
+  }
+
+  function deleteExpense(id) {
+    if(confirm(currentLang === 'hi' ? "क्या आप इस व्यय को हटाना चाहते हैं?" : "Are you sure you want to delete this expense?")) {
+      db.collection('expenses').doc(id).delete()
+        .then(() => {
+          alert(currentLang === 'hi' ? "व्यय हटा दिया गया!" : "Successfully removed expense!");
+          loadExpenses();
+        })
+        .catch(err => alert("Error deleting expense: " + err.message));
+    }
+  }
+
+  // Gallery Logic
+  let galleryImages = [];
+
+  async function handleGalleryImages(input) {
+    const files = Array.from(input.files);
+    if (files.length === 0) return;
+
+    for (let i = 0; i < files.length; i++) {
+      const file = files[i];
+      uploadToCloudinary(file, async (url, fname, fsize) => {
+        if (url) {
+          try {
+            await db.collection("gallery").add({
+              url: url,
+              name: file.name,
+              type: file.type,
+              size: file.size,
+              date: new Date().toLocaleDateString('hi-IN'),
+              uploadDate: new Date()
+            });
+            loadGallery();
+          } catch (dbError) {
+            console.error('Database save failed:', dbError);
+          }
+        }
+      });
+    }
+    input.value = "";
+  }
+
+  async function loadGallery() {
+    try {
+      const snapshot = await db.collection('gallery').orderBy('uploadDate', 'asc').get();
+      galleryImages = [];
+      snapshot.forEach(doc => galleryImages.push({ id: doc.id, ...doc.data() }));
+      renderGallery(galleryImages);
+    } catch (error) {
+      const snapshot = await db.collection('gallery').get();
+      galleryImages = [];
+      snapshot.forEach(doc => galleryImages.push({ id: doc.id, ...doc.data() }));
+      renderGallery(galleryImages);
+    }
+  }
+
+  function renderGallery(images) {
+    const container = document.getElementById('imageGrid');
+    const emptyMsg = document.getElementById('galleryEmpty');
+    
+    if (!images || images.length === 0) {
+      container.innerHTML = "";
+      if (emptyMsg) emptyMsg.style.display = "block";
+      return;
+    }
+    if (emptyMsg) emptyMsg.style.display = "none";
+    
+    container.innerHTML = images.map(img => `
+      <div class="image-item">
+        <button class="delete-btn" onclick="deleteImage('${img.id}')" title="Delete">
+          <i class="fas fa-times"></i>
+        </button>
+        <img 
+          src="${img.url}" 
+          alt="${img.name || 'Festival Image'}" 
+          onclick="showModal('${img.url}', '${img.name}', '${img.date}')" 
+          loading="lazy"
+        />
+      </div>
+    `).join('');
+  }
+
+  function deleteImage(id) {
+    if (!confirm(currentLang === 'hi' ? "क्या आप वाकई इस फोटो को हटाना चाहते हैं?" : "Are you sure you want to delete this photo?")) return;
+    db.collection('gallery').doc(id).delete()
+      .then(() => {
+        loadGallery();
+      });
+  }
+
+  function showModal(url, name, date) {
+    const modal = document.getElementById('imageModal');
+    document.getElementById('modalImage').src = url;
+    document.getElementById('modalImageName').textContent = name || '';
+    document.getElementById('modalImageDate').textContent = date || '';
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    const modal = document.getElementById('imageModal');
+    modal.classList.remove('active');
+    document.getElementById('modalImage').src = '';
+    document.body.style.overflow = 'auto';
+  }
+
+  function initializeGalleryEvents() {
+    const modal = document.getElementById('imageModal');
+    if (modal) {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+      });
+    }
+  }
+
+  // Members Logic
+  let memberPhotoFile = null;
+
+  function handleMemberPhoto(input) {
+    memberPhotoFile = input.files[0] || null;
+    if (memberPhotoFile) {
+      document.getElementById('photoFileName').textContent = memberPhotoFile.name;
+    }
+  }
+
+  function addMember() {
+    const name = document.getElementById('memberName').value.trim();
+    const contact = document.getElementById('memberContact').value.trim();
+    
+    if (!name) {
+      alert(currentLang === 'hi' ? 'कृपया सदस्य का नाम भरें।' : 'Please enter member name.');
+      return;
+    }
+
+    if (memberPhotoFile) {
+      uploadToCloudinary(memberPhotoFile, (url, fname) => {
+        if (url) saveMember(name, contact, url, fname);
+        else alert(currentLang === 'hi' ? "फ़ोटो अपलोड में त्रुटि!" : "Photo upload failed!");
+      });
+    } else {
+      saveMember(name, contact, null, null);
+    }
+  }
+
+  function saveMember(name, contact, photoURL, photoName) {
+    const memberData = {
+      name: name,
+      contact: contact || '',
+      date: new Date().toLocaleDateString(),
+      timestamp: new Date()
+    };
+
+    if (photoURL) {
+      memberData.photoURL = photoURL;
+      memberData.photoName = photoName;
+    }
+
+    db.collection('members').add(memberData)
+      .then(() => {
+        alert(currentLang === 'hi' ? 'सदस्य सफलतापूर्वक जोड़ा गया!' : 'Member added successfully!');
+        clearMemberForm();
+        loadMembers();
+      })
+      .catch(error => alert('Error adding member: ' + error.message));
+  }
+
+  function clearMemberForm() {
+    document.getElementById('memberName').value = '';
+    document.getElementById('memberContact').value = '';
+    document.getElementById('memberPhoto').value = '';
+    memberPhotoFile = null;
+    document.getElementById('photoPreview').innerHTML = `
+      <i class="fas fa-camera fa-2x text-muted mb-1"></i>
+      <p id="photoFileName" class="small m-0 text-muted">${translations[currentLang].uploadMemberPhotoText}</p>
+    `;
+  }
+
+  function loadMembers() {
+    db.collection("members").orderBy("timestamp", "asc").get()
+      .then((querySnapshot) => {
+        const members = [];
+        querySnapshot.forEach((doc) => {
+          let data = doc.data();
+          data.id = doc.id;
+          members.push(data);
+        });
+        renderMembers(members);
+      });
+  }
+
+  function renderMembers(members) {
+    const membersGrid = document.getElementById('membersGrid');
+    const membersEmpty = document.getElementById('membersEmpty');
+    
+    if (!members.length) {
+      membersGrid.innerHTML = '';
+      membersEmpty.style.display = 'block';
+      return;
+    }
+
+    membersGrid.innerHTML = members.map(member => `
+      <div class="member-card">
+        <button class="delete-btn btn-delete-member" style="display:none; position:absolute; top:8px; right:8px; background:#ef4444; color:white; border:none; border-radius:50%; width:24px; height:24px;" id="btn-delete-member" onclick="deleteMember('${member.id}')">
+          <i class="fas fa-times"></i>
+        </button>
+        
+        ${member.photoURL ? 
+          `<img src="${member.photoURL}" alt="${member.name}" class="member-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+           <div class="member-placeholder" style="display: none;"><i class="fas fa-user"></i></div>` : 
+          `<div class="member-placeholder"><i class="fas fa-user"></i></div>`
+        }
+        
+        <h6 class="fw-bold mb-1 text-dark">${member.name}</h6>
+        ${member.contact ? `<p class="small text-muted mb-1"><i class="fas fa-phone me-1"></i>${member.contact}</p>` : ''}
+        <small class="text-secondary opacity-75" style="font-size:0.75rem;">Added: ${member.date}</small>
+      </div>
+    `).join('');
+    
+    membersEmpty.style.display = 'none';
+  }
+
+  function deleteMember(id) {
+    if (confirm(currentLang === 'hi' ? 'क्या आप इस सदस्य को हटाना चाहते हैं?' : 'Are you sure you want to delete this member?')) {
+      db.collection("members").doc(id).delete()
+        .then(() => {
+          alert(currentLang === 'hi' ? 'सदस्य हटा दिया गया!' : 'Member deleted successfully!');
+          loadMembers();
+        });
+    }
+  }
+</script>
+
+<!-- Firebase Config Initialization -->
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyDHCFp2U83R2htaKKz5ZTRAPLahh7lkcXE",
+    authDomain: "ganpati2025-da162.firebaseapp.com",
+    databaseURL: "https://ganpati2025-da162-default-rtdb.firebaseio.com",
+    projectId: "ganpati2025-da162",
+    storageBucket: "ganpati2025-da162.firebasestorage.appspot.com",
+    messagingSenderId: "198731408007",
+    appId: "1:198731408007:web:a61f4bf5b6fbcb83ae8e22",
+    measurementId: "G-043GNXQ86Q"
+  };
+   
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+  const storage = firebase.storage();
+</script>
+
+<!-- Cloudinary Upload Logic -->
+<script>
+  const CLOUDINARY_URL = "https://api.cloudinary.com/v1_1/dosohpffj/upload";
+  const CLOUDINARY_UPLOAD_PRESET = "Ganpati2025";
+
+  function uploadToCloudinary(file, callback) {
+    const formData = new FormData();
+    formData.append("file", file);
+    formData.append("upload_preset", CLOUDINARY_UPLOAD_PRESET);
+
+    fetch(CLOUDINARY_URL, {
+      method: 'POST',
+      body: formData
+    })
+    .then(res => res.json())
+    .then(data => {
+      if(data.secure_url) callback(data.secure_url, data.original_filename, data.bytes);
+      else callback(null, null, null);
+    })
+    .catch(() => callback(null, null, null));
+  }
+</script>
+
+<!-- Bootstrap Bundle JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+     
